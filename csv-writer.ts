@@ -1,5 +1,6 @@
 import { createWriteStream } from "fs";
 import { Transform } from "json2csv";
+import path from "path";
 
 import { Readable } from "stream";
 
@@ -9,7 +10,10 @@ export class CSVWriter {
   private input = new Readable({ objectMode: true });
 
   constructor(fileName = "", fields: string[]) {
-    this.fileName = `./data/${fileName}-${Date.now()}.csv`;
+    this.fileName = path.resolve(
+      __dirname,
+      `./data/${fileName}-${Date.now()}.csv`
+    );
     const json2Csv = new Transform({ fields }, {});
 
     this.input._read = () => {};

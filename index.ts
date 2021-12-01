@@ -46,16 +46,16 @@ async function fetchAllSales(
   }
 }
 
-// fetchAllAssets(
-//   new CSVWriter("assets", ASSET_FIELDS),
-//   "0x7Bd29408f11D2bFC23c34f18275bBf23bB716Bc7"
-// );
+fetchAllAssets(
+  new CSVWriter("assets", ASSET_FIELDS),
+  "0x7Bd29408f11D2bFC23c34f18275bBf23bB716Bc7"
+);
 
 // fetchAllAssets(
 //   new CSVWriter("sales", SALES_FIELDS),
 //   "0x7Bd29408f11D2bFC23c34f18275bBf23bB716Bc7"
 // );
 
-getAssetSales("0x7Bd29408f11D2bFC23c34f18275bBf23bB716Bc7", 0).then((res) =>
-  console.log(res)
-);
+// getAssetSales("0x7Bd29408f11D2bFC23c34f18275bBf23bB716Bc7", 0).then((res) =>
+//   console.log(res)
+// );
