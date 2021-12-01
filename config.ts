@@ -1,9 +1,9 @@
-export const LIMIT_PER_CALL = 2;
-export const MAX_ASSET_LOOPS = 4;
+export const LIMIT_PER_CALL = 2; // 50
+export const MAX_ASSET_LOOPS = 4; // 400
 export const SALES_LOOPS = 100;
 
 export const baseURL = "https://api.opensea.io/api/v1";
-export const timeout = 20000;
+export const timeout = 20000; // this is api timeout
 
 export const ASSET_FIELDS = [
   "token_id",
